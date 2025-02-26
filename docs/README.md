@@ -5,11 +5,11 @@ helm package ../chart/ -d .
 ```
 After the package has been built, rebuild the index with:
 ```shell
-helm repo index . --url https://sebastiandaberdaku.github.io/apache-airflow-providers-pysparkonk8s
+helm repo index . --url https://sdaberdaku.github.io/apache-airflow-providers-pysparkonk8s
 ```
 The current repository can be added with the following command:
 ```shell
-helm repo add pysparkonk8s https://sebastiandaberdaku.github.io/apache-airflow-providers-pysparkonk8s
+helm repo add pysparkonk8s https://sdaberdaku.github.io/apache-airflow-providers-pysparkonk8s
 ```
 The repository can then be updated with the following command:
 ```shell
