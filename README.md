@@ -152,13 +152,13 @@ export AIRFLOW_VERSION="2.8.1"
 The provided package can be installed in a reproducible way with the following command:
 ```shell
 pip install apache-airflow==${AIRFLOW_VERSION} \
-  git+https://github.com/sebastiandaberdaku/apache-airflow-providers-pysparkonk8s.git@main \
+  git+https://github.com/sdaberdaku/apache-airflow-providers-pysparkonk8s.git@main \
   --constraint "https://raw.githubusercontent.com/apache/airflow/constraints-${AIRFLOW_VERSION}/constraints-${PYTHON_VERSION}.txt"
 ```
 or (if git is missing):
 ```shell
 pip install apache-airflow==${AIRFLOW_VERSION} \
-  https://github.com/sebastiandaberdaku/apache-airflow-providers-pysparkonk8s/archive/refs/heads/main.tar.gz \
+  https://github.com/sdaberdaku/apache-airflow-providers-pysparkonk8s/archive/refs/heads/main.tar.gz \
   --constraint "https://raw.githubusercontent.com/apache/airflow/constraints-${AIRFLOW_VERSION}/constraints-${PYTHON_VERSION}.txt"
 ```
 
@@ -181,7 +181,7 @@ See the related [documentation](docs/README.md) for more details.
 
 To install the addon in the `airflow` namespace use the following command:
 ```shell
-helm repo add pysparkonk8s https://sebastiandaberdaku.github.io/apache-airflow-providers-pysparkonk8s
+helm repo add pysparkonk8s https://sdaberdaku.github.io/apache-airflow-providers-pysparkonk8s
 helm upgrade --install pysparkonk8s pysparkonk8s/pysparkonk8s-addon --namespace airflow
 ```
 
@@ -197,7 +197,7 @@ check` and initialize a new database with `airflow db migrate` (`airflow db init
 ### Cloning the project from GitHub
 From a terminal run the following command to clone the project and navigate into the newly created folder:
 ```shell
-git clone https://github.com/sebastiandaberdaku/apache-airflow-providers-pysparkonk8s.git
+git clone https://github.com/sdaberdaku/apache-airflow-providers-pysparkonk8s.git
 cd apache-airflow-providers-pysparkonk8s
 ```
 
