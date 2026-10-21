@@ -109,7 +109,7 @@ class _CommonConf(_SparkConf):
     memory: Memory | None = Memory.gibibytes(1)
     memory_overhead: Memory | None = None
     memory_overhead_factor: float | None = None
-    image: str = "sebastiandaberdaku/airflow:2.8.1-python3.10-java17-pyspark3.5.0"
+    image: str = "ghcr.io/sdaberdaku/airflow:2.8.1-python3.10-java17-pyspark3.5.0"
     container_name: str | None = "spark"
     service_account_name: Literal[Sentinel.AUTODETECT] | str | None = "airflow-worker"
     aws_role_arn: Literal[Sentinel.AUTODETECT] | str | None = Sentinel.AUTODETECT

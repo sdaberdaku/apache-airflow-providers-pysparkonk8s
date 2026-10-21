@@ -42,7 +42,7 @@ helm upgrade --install airflow apache-airflow/airflow \
   --create-namespace \
   --set triggerer.enabled=false \
   --set statsd.enabled=false \
-  --set images.airflow.repository=sebastiandaberdaku/airflow \
+  --set images.airflow.repository=ghcr.io/sdaberdaku/airflow \
   --set images.airflow.tag=2.8.1-python3.10-java17-pyspark3.5.0 \
   --set images.airflow.pullPolicy=Always \
   --set executor=KubernetesExecutor \
@@ -57,7 +57,7 @@ helm upgrade --install airflow apache-airflow/airflow \
 
 Install the `pysparkonk8s-addon` Helm chart.
 ```shell
-helm repo add pysparkonk8s https://sebastiandaberdaku.github.io/apache-airflow-providers-pysparkonk8s
+helm repo add pysparkonk8s https://sdaberdaku.github.io/apache-airflow-providers-pysparkonk8s
 helm upgrade --install pysparkonk8s pysparkonk8s/pysparkonk8s-addon \
   --version 1.0.0 \
   --namespace airflow \

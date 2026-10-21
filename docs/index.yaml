@@ -13,6 +13,6 @@ entries:
     name: pysparkonk8s-addon
     type: application
     urls:
-    - https://sebastiandaberdaku.github.io/apache-airflow-providers-pysparkonk8s/pysparkonk8s-addon-1.0.0.tgz
+    - https://sdaberdaku.github.io/apache-airflow-providers-pysparkonk8s/pysparkonk8s-addon-1.0.0.tgz
     version: 1.0.0
 generated: "2024-01-25T09:28:46.588576076+01:00"

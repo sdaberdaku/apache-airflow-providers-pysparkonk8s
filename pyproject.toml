@@ -43,7 +43,7 @@ dependencies = [
 ]
 
 [project.urls]
-"Source Code" = "https://github.com/sebastiandaberdaku/apache-airflow-providers-pysparkonk8s"
+"Source Code" = "https://github.com/sdaberdaku/apache-airflow-providers-pysparkonk8s"
 
 [project.readme]
 file = "README.md"
