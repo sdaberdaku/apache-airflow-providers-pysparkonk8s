@@ -18,9 +18,9 @@ supported.
 When running Spark in `Client` mode, the provider will provision a Spark cluster configuring Kubernetes as master, and 
 will instantiate one Spark Driver pod and one or more Spark Executor pods depending on the configuration. 
 
-The Spark Driver will coincide with the Airflow Worker pod running the task. This has several benefits, including a 
-seamless integration with Airflow's [TaskFlow API](https://airflow.apache.org/docs/apache-airflow/stable/tutorial/taskflow.html), 
-and access to Airflow [Variables](https://airflow.apache.org/docs/apache-airflow/stable/core-concepts/variables.html), 
+The Spark Driver will coincide with the Airflow Worker pod running the task. As a result, the task works with Airflow's 
+[TaskFlow API](https://airflow.apache.org/docs/apache-airflow/stable/tutorial/taskflow.html), and it can 
+access Airflow [Variables](https://airflow.apache.org/docs/apache-airflow/stable/core-concepts/variables.html), 
 [Connections](https://airflow.apache.org/docs/apache-airflow/stable/authoring-and-scheduling/connections.html) and 
 [XComs](https://airflow.apache.org/docs/apache-airflow/stable/core-concepts/xcoms.html#xcoms) from within the PySpark 
 code.
@@ -53,7 +53,7 @@ The provider also supports running PySpark code on an existing Spark Connect clu
 functionalities [might not be supported](https://spark.apache.org/docs/latest/spark-connect-overview.html#what-is-supported-in-spark-34) 
 when using Spark Connect. 
 
-In this scenario, the provider allows users to easily connect to an existing Sparck Connect cluster with minimal 
+In this scenario, the provider allows users to easily connect to an existing Spark Connect cluster with minimal 
 configuration.
 
 ## Usage
@@ -239,8 +239,8 @@ export AIRFLOW__CORE__LOAD_EXAMPLES=False
 export AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=sqlite:////tmp/airflow.db
 airflow db migrate
 ```
-This will create the `airflow.db` file in your current folder. This file is already included in `.gitignore`, however 
-please make sure you are not accidentally adding it to git if you change the default file path.
+This will create the `airflow.db` file in `/tmp`. If you point `AIRFLOW__DATABASE__SQL_ALCHEMY_CONN` at a path inside
+the repository instead, make sure you do not add the database file to git (`.gitignore` does not cover `airflow.db`).
 
 If you have any issues in setting up the SQLite database please refer to the 
 [official Airflow documentation](https://airflow.apache.org/docs/apache-airflow/stable/howto/set-up-database.html#setting-up-a-sqlite-database).
